@@ -83,12 +83,6 @@ def runAllSims(args: Dict[str, Any]) -> None:
     print(f"Probability of winning {wins/args['num_sims']}")
 
 
-def main(args: Dict[str, Any]) -> None:
-    print(f"Running {args['num_sims']} simulations...")
-    runAllSims(args)
-    print(f"Finished running {args['num_sims']} simulations.")
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Monty Hall simulator.")
     parser.add_argument(
@@ -111,4 +105,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("-v", "--verbose", action="store_true", help="Verbose output.")
     args = vars(parser.parse_args())
-    main(args)
+
+    print(f"Running {args['num_sims']} simulations...")
+    runAllSims(args)
+    print(f"Finished running {args['num_sims']} simulations.")
