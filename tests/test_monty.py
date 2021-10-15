@@ -1,4 +1,4 @@
-from montyhall_sim.monty import MontyHall, runAllSims, runSim
+from montyhall_sim.monty import runAllSims, runSim
 
 
 def test_reveal(montyhall):
